@@ -1,0 +1,13 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -m zzzzz
+WorkingDirectory=/root/zzzzz
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
