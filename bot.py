@@ -32,8 +32,8 @@ def handle_start(message: telebot.types.Message):
         "yang dapat memudahkan kerja anda!\n\nSaya mempunyai beberapa fungsi "
         "menarik yang dapat anda gunakan!\n\nKlik butang di bawah untuk memulakan.\n"
         "==================================="),
-        reply_markup=get_start_keyboard())  # Papan kekunci utama
-    )
+        reply_markup=get_start_keyboard()  # Papan kekunci utama
+    ))
 
 @bot.message_handler(func=lambda message: message.text == "Bug Vless")
 def handle_bugvless(message: telebot.types.Message):
