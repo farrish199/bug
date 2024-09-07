@@ -26,8 +26,8 @@ def get_bugvless_keyboard() -> types.ReplyKeyboardMarkup:
 @bot.message_handler(commands=['start'])
 def handle_start(message: telebot.types.Message):
     """Handle /start command."""
-    bot.reply_to(
-        message,
+    bot.send_message(
+        message.chat.id,  # Hantar mesej ke chat.id pengguna
         "===================================\nBot MF By IMMANVPN\n\n"
         "Hi! Saya adalah bot yang dapat membantu anda dalam beberapa hal "
         "yang dapat memudahkan kerja anda!\n\nSaya mempunyai beberapa fungsi "
@@ -39,8 +39,8 @@ def handle_start(message: telebot.types.Message):
 @bot.message_handler(func=lambda message: message.text == "Bug Vless")
 def handle_bugvless(message: telebot.types.Message):
     """Handle Bug Vless button and show options."""
-    bot.reply_to(
-        message,
+    bot.send_message(
+        message.chat.id,
         "Pilih salah satu pilihan di bawah:",
         reply_markup=get_bugvless_keyboard()
     )
@@ -73,9 +73,9 @@ def handle_conversion(message: telebot.types.Message):
             "Booster 2": f"vless://{uuid}@www.speedtest.net:80?path=/vlessws&encryption=none&type=ws&host={subdo}#{name}"
         }
         reply = conversion_options.get(message.text, "Invalid option selected.")
-        bot.reply_to(message, reply)
+        bot.send_message(message.chat.id, reply)
     else:
-        bot.reply_to(message, "Invalid URL format. Please send a valid vless URL.")
+        bot.send_message(message.chat.id, "Invalid URL format. Please send a valid vless URL.")
 
 @bot.message_handler(func=lambda message: message.text in [
     "Digi BS", "Digi XL", "UmoFunz XL", "Maxis UL",
