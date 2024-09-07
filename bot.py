@@ -26,19 +26,24 @@ def get_bugvless_keyboard() -> types.ReplyKeyboardMarkup:
 @bot.message_handler(commands=['start'])
 def handle_start(message: telebot.types.Message):
     """Handle /start command."""
-    bot.reply_to(message, (
+    bot.reply_to(
+        message,
         "===================================\nBot MF By IMMANVPN\n\n"
         "Hi! Saya adalah bot yang dapat membantu anda dalam beberapa hal "
         "yang dapat memudahkan kerja anda!\n\nSaya mempunyai beberapa fungsi "
         "menarik yang dapat anda gunakan!\n\nKlik butang di bawah untuk memulakan.\n"
-        "==================================="),
+        "===================================",
         reply_markup=get_start_keyboard()  # Papan kekunci utama
-    ))
+    )
 
 @bot.message_handler(func=lambda message: message.text == "Bug Vless")
 def handle_bugvless(message: telebot.types.Message):
     """Handle Bug Vless button and show options."""
-    bot.reply_to(message, "Pilih salah satu pilihan di bawah:", reply_markup=get_bugvless_keyboard())
+    bot.reply_to(
+        message,
+        "Pilih salah satu pilihan di bawah:",
+        reply_markup=get_bugvless_keyboard()
+    )
 
 def extract_info_from_text(user_text: str) -> tuple:
     """Extract UUID, subdomain, and name from a full vless URL."""
