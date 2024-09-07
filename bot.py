@@ -3,7 +3,7 @@ from telebot import types
 import re
 
 # Token API bot anda
-TOKEN = 'YOUR_TELEGRAM_BOT_API_TOKEN'
+TOKEN = '7409687169:AAGM1ybul2bukhyumgpQy8CBlrxUDeP-ijI'
 bot = telebot.TeleBot(TOKEN)
 
 # Simpan status dan pilihan pengguna
