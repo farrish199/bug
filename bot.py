@@ -84,7 +84,7 @@ def handle_vless_url(message: telebot.types.Message):
                 conversion_options = {
                     "Digi BS": f"vless://{uuid}@162.159.134.61:80?path=/vlessws&encryption=none&type=ws&host={subdo}#{name}",
                     "Digi XL": f"vless://{uuid}@app.optimizely.com:80?path=/vlessws&encryption=none&type=ws&host={subdo}#{name}",
-                    "UmoFunz XL": f"vless://{uuid}@your-address:80?path=/vlessws&encryption=none&type=ws&host=m.pubgmobile.com#{name}",
+                    "UmoFunz XL": f"vless://{uuid}@{subdo}:80?path=/vlessws&encryption=none&type=ws&host=m.pubgmobile.com#{name}",
                     "Maxis UL": f"vless://{uuid}@speedtest.net:443?path=/vlessws&encryption=none&type=ws&host=fast.{subdo}&sni=speedtest.net#{name}",
                     "Unifi XL": f"vless://{uuid}@104.17.10.12:80?path=/vlessws&encryption=none&type=ws&host={subdo}#{name}",
                     "Yes XL": f"vless://{uuid}@104.17.113.188:80?path=/vlessws&encryption=none&type=ws&host=tap-database.who.int.{subdo}#{name}",
