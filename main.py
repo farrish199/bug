@@ -3,8 +3,8 @@ from pyrogram.types import ReplyKeyboardMarkup, KeyboardButton
 import re
 
 # Token API bot anda
-API_ID = 'YOUR_API_ID'  # Gantikan dengan API ID anda
-API_HASH = 'YOUR_API_HASH'  # Gantikan dengan API Hash anda
+API_ID = '10115546'  # Gantikan dengan API ID anda
+API_HASH = '366347107f54aabc951cfa9d3c2fb2ce'  # Gantikan dengan API Hash anda
 TOKEN = '7409687169:AAGM1ybul2bukhyumgpQy8CBlrxUDeP-ijI'
 
 app = Client("my_bot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
