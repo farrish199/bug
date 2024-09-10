@@ -1,13 +1,13 @@
 from pyrogram import Client, filters
 from pyrogram.types import ReplyKeyboardMarkup, KeyboardButton
 import re
+import os
 
-# Token API bot anda
-API_ID = '10115546'  # Gantikan dengan API ID anda
-API_HASH = '366347107f54aabc951cfa9d3c2fb2ce'  # Gantikan dengan API Hash anda
-TOKEN = '7409687169:AAGM1ybul2bukhyumgpQy8CBlrxUDeP-ijI'
+API_ID = os.getenv("API_ID")
+API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-app = Client("my_bot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+app = Client("my_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 # Simpan status dan pilihan pengguna
 user_states = {}
